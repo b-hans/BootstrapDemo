@@ -1,4 +1,10 @@
 .customDiv {
+	padding : 10px;
+	width : 100%;
+}
+
+/* 
+.customDiv {
 	margin-bottom : 10px;
 	min-height : 50px;
 	background-color: silver;
@@ -6,6 +12,7 @@
 	font-size : large;
 	padding : 10px;
 }
+ */
 .sidebarContent {
 	margin-bottom : 10px;
 	min-height : 150px;
