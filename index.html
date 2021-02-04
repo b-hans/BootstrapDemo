@@ -25,8 +25,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<button class="btn btn-primary btn-sm pull-right" 
-				data-target="#loginModal" 
-				data-toggle="modal">Login</button>
+				id="btnShowModal">Login</button>
 				<div class="modal fade" data-keyboard="false" 
 				data-backdrop="static" id="loginModal" tabindex="-1">
 					<div class="modal-dialog modal-lg">
@@ -55,7 +54,7 @@
 								<div class="modal-footer">
 									<button class="btn btn-primary">Login</button>
 									<button class="btn btn-primary" 
-									data-dismiss="modal">Close</button>
+									id="btnHideModal">Close</button>
 								</div>
 							</div>
 						</div>
@@ -1562,6 +1561,30 @@ Bootstrap framework is based on open standards - HTML, CSS and JavaScript. This 
      	});
     </script>
     -->
+    
+    <script type="text/javascript">
+    	$(document).ready(function () {
+    		$('#btnShowModal').click(function () {
+    			$('#loginModal').modal('show');
+    		});
+    		$('#btnHideModal').click(function () {
+    			$('#loginModal').modal('hide');
+    		});
+    		
+    		$('#loginModal').on('show.bs.modal', function () {
+    			alert('Modal is about to be displayed');
+    		});
+    		$('#loginModal').on('shown.bs.modal', function () {
+    			alert('Modal is displayed');
+    		});
+    		$('#loginModal').on('hide.bs.modal', function () {
+    			alert('Modal is about to be hidden');
+    		});
+    		$('#loginModal').on('hidden.bs.modal', function () {
+    			alert('Modal is hidden');
+    		});
+    	});
+    </script>
 </body>
 
 </html>
