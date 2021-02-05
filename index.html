@@ -24,6 +24,18 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
+			<br><br>
+			
+			<button class="btn btn-primary" data-toggle="tooltip">Button</button>
+				
+			</div>
+		</div>
+	</div>
+
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
 				<ul class="nav nav-tabs nav-justified">
 					<li class="active">
 						<a href="#homeTab" data-toggle="tab">Home</a>
@@ -69,6 +81,7 @@
 		</div>
 	</div>
 
+-->
 
 <!--
 	<div class="container">
@@ -1616,6 +1629,16 @@ Bootstrap framework is based on open standards - HTML, CSS and JavaScript. This 
     
     <script type="text/javascript">
     	$(document).ready(function () {
+    	
+    		$('[data-toggle="tooltip"]').tooltip({
+    			placement : 'right',
+    			title :  '<h3>Help</h3><p>Click to submit this page</p>', 
+    			animation : true,
+    			delay : {show:300, hide:500},
+    			html : true
+    		});
+    	
+    		/*
     		$('#btnShowModal').click(function () {
     			$('#loginModal').modal('show');
     		});
@@ -1635,6 +1658,7 @@ Bootstrap framework is based on open standards - HTML, CSS and JavaScript. This 
     		$('#loginModal').on('hidden.bs.modal', function () {
     			alert('Modal is hidden');
     		});
+    		*/
     	});
     </script>
 </body>
