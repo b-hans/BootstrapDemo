@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -24,6 +24,24 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6">
+			
+				<button id="btnSubmit" class="btn btn-primary">Submit</button>
+				<br><br>
+						
+				<div id="myAlert" class="alert alert-danger collapse">
+					<a href="#" class="close" id="linkClose">&times;</a>
+					<strong>Error!</strong> There is a problem submitting your form.
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6">
 			<br><br>
 			
 			<button class="btn btn-primary" id="btnPopover" title="Penguins"
@@ -38,6 +56,7 @@
 			</div>
 		</div>
 	</div>
+-->
 
 
 <!--
@@ -1666,7 +1685,19 @@ Bootstrap framework is based on open standards - HTML, CSS and JavaScript. This 
     <script type="text/javascript">
     	$(document).ready(function () {
     	
-    		$('#btnPopover').popover();
+    		$('#btnSubmit').click(function () {
+    			$('#myAlert').show('fade');
+    			
+    			setTimeout(function () {
+    				$('#myAlert').hide('fade');
+    			}, 2000);
+    		});
+    		
+    		$('#linkClose').click(function () {
+    			$('#myAlert').hide('fade');
+    		});
+    	
+    		//$('#btnPopover').popover();
 
 			/*    	
     		$('#txtName').tooltip({
