@@ -7,9 +7,12 @@
     <title>Bootstrap Example</title>
     <link href="bootstrap-3.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="CustomStyles.css" rel="stylesheet">
+    <style type="text/css">
+    	body { position : relative; }
+    </style>
+    
 </head>
-<body>
-<br><br>
+<body data-spy="scroll" data-target="#mainNavbar" data-offset="10">
 
 <!--
 	<div class="container">
@@ -21,6 +24,65 @@
 	</div>
 -->
 
+	<nav id="mainNavbar" class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-target=".navbar-collapse" 
+					data-toggle="collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#divDesert">Desert</a></li>
+					<li><a href="#divLighthouse">Lighthouse</a></li>
+					<li><a href="#divTulips">Tulips</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Animals <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#divJellyfish">Jellyfish</a></li>
+							<li><a href="#divPenguins">Penguins</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<div class="container">
+		<div id="divDesert" class="divStyle">
+			<h1>Desert</h1>
+			<img src="images/Desert.jpg" class="img-responsive">
+		</div>
+
+		<div id="divLighthouse" class="divStyle">
+			<h1>Lighthouse</h1>
+			<img src="images/Lighthouse.jpg" class="img-responsive">
+		</div>
+
+		<div id="divTulips" class="divStyle">
+			<h1>Tulips</h1>
+			<img src="images/Tulips.jpg" class="img-responsive">
+		</div>
+
+		<div id="divJellyfish" class="divStyle">
+			<h1>Jellyfish</h1>
+			<img src="images/Jellyfish.jpg" class="img-responsive">
+		</div>
+
+		<div id="divPenguins" class="divStyle">
+			<h1>Penguins</h1>
+			<img src="images/Penguins.jpg" class="img-responsive">
+		</div>
+	</div>
+
+
+<!--
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6">
@@ -36,6 +98,7 @@
 			</div>
 		</div>
 	</div>
+-->
 
 
 <!--
