@@ -25,6 +25,26 @@
 		<div class="row">
 			<div class="col-xs-6">
 			<br><br>
+			
+			<button class="btn btn-primary" id="btnPopover" title="Penguins"
+				data-content="<img class='img-responsive' src='images/Penguins.jpg'>"
+				data-html="true"
+				data-placement="bottom"
+				data-toggle="popover"
+				data-trigger="hover">
+				Popover Example
+			</button>
+
+			</div>
+		</div>
+	</div>
+
+
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6">
+			<br><br>
 				
 				Name : <input type="text" id="txtName" title="Bootstrap tooltip" 
 				data-toggle="tooltip"> 
@@ -33,6 +53,7 @@
 			</div>
 		</div>
 	</div>
+-->
 
 <!--
 	<div class="container">
@@ -1645,6 +1666,9 @@ Bootstrap framework is based on open standards - HTML, CSS and JavaScript. This 
     <script type="text/javascript">
     	$(document).ready(function () {
     	
+    		$('#btnPopover').popover();
+
+			/*    	
     		$('#txtName').tooltip({
     			trigger : 'manual'
     		});
@@ -1652,6 +1676,7 @@ Bootstrap framework is based on open standards - HTML, CSS and JavaScript. This 
     		$('#infoIcon').hover(function () {
     			$('#txtName').tooltip('toggle');
     		});
+    		*/
     	
     		/*
     		$('[data-toggle="tooltip"]').tooltip({
